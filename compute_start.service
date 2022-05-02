@@ -1,0 +1,14 @@
+[Unit]
+Description= start system
+
+After=network-online.target
+
+[Timer]
+OnBootSec=15
+
+[Service]
+Type=forking
+ExecStart=/home/ubuntu/compute_start.sh
+
+[Install]
+WantedBy=multi-user.target
